@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+#progress {
+  padding: 0;
+  list-style-type: none;
+  font-family: arial;
+  font-size: 14px;
+  clear: both;
+  line-height: 1em;
+  margin: 0 -1px;
+  text-align: center;
+}
+
+#progress li {
+  float: left;
+  padding: 16px 10px 16px 40px;
+  background: #e0e0e0;
+  color: #616161;
+  position: relative;
+  margin: 0 2px 0 7px;
+  margin-bottom: 12px;
+}
+
+#progress li:before {
+  content: "";
+  border-left: 19px solid #fafafa;
+  border-top: 23px solid transparent;
+  border-bottom: 23.5px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#progress li:after {
+  content: "";
+  border-left: 19px solid #e0e0e0;
+  border-top: 23px solid transparent;
+  border-bottom: 23.5px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 20;
+}
+
+#progress li.active {
+  background: #2196f3;
+  color: #fff;
+  padding: 7px 10px 7px 40px;
+}
+#progress li .completeProgress .MuiCircularProgress-colorPrimary {
+  color: #ffffff;
+  width: 32px !important;
+  height: 32px !important;
+}
+#progress li .completeProgress .jss85 {
+  color: #eeeeee;
+}
+#progress li .completeProgress {
+  display: none;
+}
+#progress li.active .completeProgress {
+  display: flex;
+}
+#progress li.active:after {
+  border-left-color: #2196f3;
+}
+.completed {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  right: -27px;
+  transform: translateY(-50%);
+  background-color: #4caf50;
+  height: 24px;
+  width: 24px;
+  border: 2px solid #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 100;
+}
+.not-completed {
+  background-color: #fff;
+  color: #616161;
+}
+.d-none {
+  display: none;
+}
